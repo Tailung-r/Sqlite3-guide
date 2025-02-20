@@ -20,7 +20,7 @@ def meow(message):
     bot.register_next_step_handler(message, user_name) #move to next function
 
 def user_name(message):
-    global name #set 'name' is globa var
+    global name #set 'name' to global var
     name = message.text.strip()
     bot.send_message(message.chat.id, 'Enter your password') #getting the password for our table
     bot.register_next_step_handler(message, user_pass) #move to next function
